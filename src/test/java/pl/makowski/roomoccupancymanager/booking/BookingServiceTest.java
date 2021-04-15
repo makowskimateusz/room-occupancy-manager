@@ -1,4 +1,4 @@
-package pl.makowski.roomoccupancymanager;
+package pl.makowski.roomoccupancymanager.booking;
 
 
 import org.junit.jupiter.api.Test;
@@ -55,5 +55,41 @@ public class BookingServiceTest {
         //then
         assertThat(result.premium()).isEqualTo(1153.99);
         assertThat(result.economy()).isEqualTo(45);
+    }
+
+    @Test
+    public void shouldCalculateIncomeEvenIfNoEconomyBookingsRequested() {
+        //given
+        final long premiumRoomsCount = 7;
+        final long economyRoomsCount = 0;
+        //when
+        final var result = bookingService.calculateRooms(premiumRoomsCount, economyRoomsCount);
+        //then
+        assertThat(result.premium()).isEqualTo(1153.99);
+        assertThat(result.economy()).isEqualTo(0);
+    }
+
+    @Test
+    public void shouldCalculateIncomeEvenIfNoPremiumBookingsRequested() {
+        //given
+        final long premiumRoomsCount = 0;
+        final long economyRoomsCount = 3;
+        //when
+        final var result = bookingService.calculateRooms(premiumRoomsCount, economyRoomsCount);
+        //then
+        assertThat(result.premium()).isEqualTo(0);
+        assertThat(result.economy()).isEqualTo(167.99);
+    }
+
+    @Test
+    public void shouldCalculateZeroIncomeWhenNoRoomsWanted() {
+        //given
+        final long premiumRoomsCount = 0;
+        final long economyRoomsCount = 0;
+        //when
+        final var result = bookingService.calculateRooms(premiumRoomsCount, economyRoomsCount);
+        //then
+        assertThat(result.premium()).isEqualTo(0);
+        assertThat(result.economy()).isEqualTo(0);
     }
 }

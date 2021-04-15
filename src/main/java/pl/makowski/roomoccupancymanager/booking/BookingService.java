@@ -1,7 +1,9 @@
-package pl.makowski.roomoccupancymanager;
+package pl.makowski.roomoccupancymanager.booking;
 
-import static pl.makowski.roomoccupancymanager.BookingType.ECONOMY;
-import static pl.makowski.roomoccupancymanager.BookingType.PREMIUM;
+import pl.makowski.roomoccupancymanager.booking.dto.BookingCalculation;
+
+import static pl.makowski.roomoccupancymanager.booking.entity.BookingType.ECONOMY;
+import static pl.makowski.roomoccupancymanager.booking.entity.BookingType.PREMIUM;
 
 public class BookingService {
 
@@ -22,7 +24,6 @@ public class BookingService {
 
         return new BookingCalculation(economyIncome, premiumIncome);
     }
-
 }
 
 

@@ -1,6 +1,6 @@
-package pl.makowski.roomoccupancymanager;
+package pl.makowski.roomoccupancymanager.booking.entity;
 
-class Booking implements Comparable<Booking> {
+public class Booking implements Comparable<Booking> {
 
     private final Double price;
     private final BookingType type;

@@ -1,10 +1,10 @@
-package pl.makowski.roomoccupancymanager;
+package pl.makowski.roomoccupancymanager.booking;
+
+import pl.makowski.roomoccupancymanager.booking.entity.Booking;
 
 import java.util.ArrayDeque;
 
-public class BookingUpgrader {
-    public BookingUpgrader() {
-    }
+class BookingUpgrader {
 
     ArrayDeque<Booking> upgradeBookings(long premiumRoomsCount, ArrayDeque<Booking> premiumBookings, long economyRoomsCount, ArrayDeque<Booking> economyBookings) {
         ArrayDeque<Booking> premiumAndUpgradedBookings = new ArrayDeque<Booking>();

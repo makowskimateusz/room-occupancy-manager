@@ -1,4 +1,7 @@
-package pl.makowski.roomoccupancymanager;
+package pl.makowski.roomoccupancymanager.booking;
+
+import pl.makowski.roomoccupancymanager.booking.entity.Booking;
+import pl.makowski.roomoccupancymanager.booking.entity.BookingType;
 
 import java.util.ArrayDeque;
 import java.util.List;
@@ -6,10 +9,10 @@ import java.util.stream.DoubleStream;
 
 import static java.util.stream.Collectors.toCollection;
 import static java.util.stream.Collectors.toList;
-import static pl.makowski.roomoccupancymanager.BookingType.ECONOMY;
-import static pl.makowski.roomoccupancymanager.BookingType.PREMIUM;
+import static pl.makowski.roomoccupancymanager.booking.entity.BookingType.ECONOMY;
+import static pl.makowski.roomoccupancymanager.booking.entity.BookingType.PREMIUM;
 
-public class BookingCreator {
+class BookingCreator {
 
     private static final double PRICE_THRESHOLD = 100.00;
 
