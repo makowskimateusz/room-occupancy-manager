@@ -10,7 +10,7 @@ public class BookingServiceTest {
     private final BookingService bookingService = new BookingService();
 
     @Test
-    public void shouldReturnProposedIncomeForEconomyAndPremiumRooms() {
+    public void shouldCalculateIncomeWithoutUpgradingOffers() {
         //given
         final long premiumRoomsCount = 3;
         final long economyRoomsCount = 3;
@@ -22,7 +22,7 @@ public class BookingServiceTest {
     }
 
     @Test
-    public void shouldReturnProposedIncomeForEconomyAndPremiumRooms2() {
+    public void shouldCalculateIncomeWithoutUpgradingOffersWhenThereIsNoUpgradeCandidates() {
         //given
         final long premiumRoomsCount = 7;
         final long economyRoomsCount = 5;
@@ -34,7 +34,7 @@ public class BookingServiceTest {
     }
 
     @Test
-    public void shouldReturnProposedIncomeForEconomyAndPremiumRooms3() {
+    public void shouldNotCalculateIncomeIncludedUpgradesWhenForEconomyOffers() {
         //given
         final long premiumRoomsCount = 2;
         final long economyRoomsCount = 7;
@@ -46,7 +46,7 @@ public class BookingServiceTest {
     }
 
     @Test
-    public void shouldReturnProposedIncomeForEconomyAndPremiumRooms4() {
+    public void shouldCalculateIncomeIncludingUpgrades() {
         //given
         final long premiumRoomsCount = 7;
         final long economyRoomsCount = 1;
