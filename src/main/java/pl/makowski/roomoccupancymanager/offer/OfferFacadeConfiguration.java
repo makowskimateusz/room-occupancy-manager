@@ -10,4 +10,8 @@ public class OfferFacadeConfiguration {
     public OfferFacade offerFacade(OfferRepository offerRepository) {
         return new OfferFacade(offerRepository);
     }
+
+    public OfferFacade offerFacade() {
+        return new OfferFacade(new InMemoryOfferRepository());
+    }
 }

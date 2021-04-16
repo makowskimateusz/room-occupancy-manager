@@ -6,10 +6,9 @@ import java.util.List;
 
 import static pl.makowski.roomoccupancymanager.offer.OfferMapper.map;
 
-
 public class OfferFacade {
 
-    private OfferRepository offerRepository;
+    private final OfferRepository offerRepository;
 
     public OfferFacade(OfferRepository offerRepository) {
         this.offerRepository = offerRepository;
