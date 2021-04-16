@@ -1,11 +1,9 @@
 package pl.makowski.roomoccupancymanager.booking;
 
 import pl.makowski.roomoccupancymanager.booking.dto.BookingCalculation;
+import pl.makowski.roomoccupancymanager.booking.entity.BookingType;
 
-import static pl.makowski.roomoccupancymanager.booking.entity.BookingType.ECONOMY;
-import static pl.makowski.roomoccupancymanager.booking.entity.BookingType.PREMIUM;
-
-public class BookingService {
+public class BookingFacade {
 
     private static final double[] clientsOffers = {23, 45, 155, 374, 22, 99.99, 100, 101, 115, 209};
 
@@ -14,8 +12,8 @@ public class BookingService {
     private final BookingUpgrader bookingUpgrader = new BookingUpgrader();
 
     public BookingCalculation calculateRooms(long premiumRoomsCount, long economyRoomsCount) {
-        final var premiumBookings = bookingCreator.createBookings(clientsOffers, PREMIUM);
-        final var economyBookings = bookingCreator.createBookings(clientsOffers, ECONOMY);
+        final var premiumBookings = bookingCreator.createBookings(clientsOffers, BookingType.PREMIUM);
+        final var economyBookings = bookingCreator.createBookings(clientsOffers, BookingType.ECONOMY);
 
         final var premiumAndUpgradedBookings = bookingUpgrader.upgradeBookings(premiumRoomsCount, premiumBookings, economyRoomsCount, economyBookings);
 
