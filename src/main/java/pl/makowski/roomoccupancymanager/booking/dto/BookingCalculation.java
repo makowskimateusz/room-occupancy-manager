@@ -1,4 +1,6 @@
 package pl.makowski.roomoccupancymanager.booking.dto;
 
-public record BookingCalculation(Double economy, Double premium) {
+import com.fasterxml.jackson.annotation.JsonProperty;
+
+public record BookingCalculation(@JsonProperty("economy") Double economy, @JsonProperty("premium") Double premium) {
 }

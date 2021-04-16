@@ -11,7 +11,7 @@ import static org.springframework.http.HttpStatus.CREATED;
 
 @RestController
 @RequestMapping("/offers")
-public class OfferController {
+class OfferController {
 
     private static Logger logger = LoggerFactory.getLogger(OfferController.class);
 

@@ -1,18 +1,17 @@
 package pl.makowski.roomoccupancymanager.booking;
 
-import pl.makowski.roomoccupancymanager.booking.entity.Booking;
-import pl.makowski.roomoccupancymanager.booking.entity.BookingType;
+import pl.makowski.roomoccupancymanager.booking.domain.Booking;
+import pl.makowski.roomoccupancymanager.booking.domain.BookingType;
 import pl.makowski.roomoccupancymanager.offer.dto.OfferDto;
 
 import java.util.ArrayDeque;
 import java.util.List;
-import java.util.stream.DoubleStream;
 
 import static java.util.stream.Collectors.toCollection;
 import static java.util.stream.Collectors.toList;
 import static java.util.stream.DoubleStream.*;
-import static pl.makowski.roomoccupancymanager.booking.entity.BookingType.ECONOMY;
-import static pl.makowski.roomoccupancymanager.booking.entity.BookingType.PREMIUM;
+import static pl.makowski.roomoccupancymanager.booking.domain.BookingType.ECONOMY;
+import static pl.makowski.roomoccupancymanager.booking.domain.BookingType.PREMIUM;
 
 class BookingCreator {
 

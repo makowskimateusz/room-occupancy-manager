@@ -1,4 +1,4 @@
-package pl.makowski.roomoccupancymanager.offer.entity;
+package pl.makowski.roomoccupancymanager.offer.domain;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;

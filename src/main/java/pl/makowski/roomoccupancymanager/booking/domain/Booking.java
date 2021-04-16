@@ -1,4 +1,4 @@
-package pl.makowski.roomoccupancymanager.booking.entity;
+package pl.makowski.roomoccupancymanager.booking.domain;
 
 public class Booking implements Comparable<Booking> {
 

@@ -1,7 +1,7 @@
 package pl.makowski.roomoccupancymanager.offer;
 
 import org.springframework.data.repository.Repository;
-import pl.makowski.roomoccupancymanager.offer.entity.Offer;
+import pl.makowski.roomoccupancymanager.offer.domain.Offer;
 
 import java.util.ArrayList;
 import java.util.List;

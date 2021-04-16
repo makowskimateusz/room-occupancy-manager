@@ -3,7 +3,6 @@ package pl.makowski.roomoccupancymanager.booking;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import pl.makowski.roomoccupancymanager.offer.OfferFacade;
-import pl.makowski.roomoccupancymanager.offer.OfferFacadeConfiguration;
 
 @Configuration
 class BookingFacadeConfiguration {

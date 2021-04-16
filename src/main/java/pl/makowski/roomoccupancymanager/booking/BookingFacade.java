@@ -3,8 +3,8 @@ package pl.makowski.roomoccupancymanager.booking;
 import pl.makowski.roomoccupancymanager.booking.dto.BookingCalculation;
 import pl.makowski.roomoccupancymanager.offer.OfferFacade;
 
-import static pl.makowski.roomoccupancymanager.booking.entity.BookingType.ECONOMY;
-import static pl.makowski.roomoccupancymanager.booking.entity.BookingType.PREMIUM;
+import static pl.makowski.roomoccupancymanager.booking.domain.BookingType.ECONOMY;
+import static pl.makowski.roomoccupancymanager.booking.domain.BookingType.PREMIUM;
 
 public class BookingFacade {
 

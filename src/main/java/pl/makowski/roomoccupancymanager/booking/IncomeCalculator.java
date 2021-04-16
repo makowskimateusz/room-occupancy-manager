@@ -1,6 +1,6 @@
 package pl.makowski.roomoccupancymanager.booking;
 
-import pl.makowski.roomoccupancymanager.booking.entity.Booking;
+import pl.makowski.roomoccupancymanager.booking.domain.Booking;
 
 import java.util.ArrayDeque;
 
